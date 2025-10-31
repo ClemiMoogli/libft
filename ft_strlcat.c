@@ -12,34 +12,6 @@
 
 #include <bsd/string.h>
 #include <stdio.h>
-/*
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-{
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	size_t	len_dst;
-
-	i = 0;
-	j = 0;
-	k = 0;
-	while (dst[i])
-		i++;
-	len_dst = i;
-	while (src[k])
-		k++;
-	while ((i < (size - 1)) && src[j])
-	{
-		dst[i] = src[j];
-		j++;
-		i++;
-	}
-	dst[i] = '\0';
-	if (size < (len_dst + k))
-		return (len_dst + k);
-	return (size);
-}*/
-
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
