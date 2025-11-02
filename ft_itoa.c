@@ -35,6 +35,8 @@ int ft_power(int n, int p)
     return (result);
 }
 
+
+// gerer le cas, si nomnre == 0;
 // Ajouter le if nombre negatif alors ajouter '-' devant et malloc + 1;
 char    *ft_itoa(int n)
 {
@@ -52,7 +54,7 @@ char    *ft_itoa(int n)
        n = n * -1;
    }
    power = calculate_power(n, 0);
-   if (n < 0)
+   if (sign == 1)
         len_s = power + 1;
     else 
         len_s = power;
@@ -61,27 +63,21 @@ char    *ft_itoa(int n)
        return (NULL);
    while (i <= len_s)
    {
+       printf("len_s : %d\n", len_s);
        if (i == 0 && sign == 1)
        {
-           printf("Negatif\n");
            ptr[i] = '-';
            i++;
        }
-       else if (n / ft_power(10, power) <= 0)
+       if (n / ft_power(10, power) <= 0)
        {
            ptr[i] = (n % ft_power(10, power)) + '0';
-           //printf("Chiffre: %d\n", n % ft_power(10, power));
            i++;
        }
-       else {
-       
-       //printf("Chiffre: %d\n", n / ft_power(10, power));
-       //printf("Reste: %d\n", n % ft_power(10, power));
        ptr[i] = (n / ft_power(10, power)) + '0';
        n = n % ft_power(10, power);
        i++;
        power--;
-       }
    }
     ptr[i] = '\0';
     return (ptr);
@@ -90,8 +86,7 @@ char    *ft_itoa(int n)
 int main()
 {
     char    *result;
-    result = ft_itoa(-125435);
-    //printf("Calculer puissance de 10 puissance 2 : %d\n", ft_power(10, 2));
+    result = ft_itoa(0);
     printf("Calculate power %s\n", result);
     free(result);
     return (0);
