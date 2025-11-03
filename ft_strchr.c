@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 10:40:53 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 15:42:26 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 23:29:52 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char	*ft_strchr(const char *s, int c)
 		}
 		i++;
 	}
+	if ((char)c == '\0')
+		return ((char *)&s[i]);
 	return (NULL);
 }
 /*

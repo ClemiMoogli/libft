@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:36:12 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 15:58:16 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 23:00:56 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,7 @@
 #include <bsd/string.h>
 #include <stdio.h>
 
-/*
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-{
-	size_t	len_dst;
-	size_t	len_src;
-	size_t	i;
-	size_t	j;
-
-	len_dst = 0;
-	len_src = 0;
-	j = 0;
-	i = 0;
-	while (dst[len_dst])
-		len_dst++;
-	while (src[len_src])
-		len_src++;
-	if (size > (len_dst + len_src))
-	{
-		i = len_dst;
-		while (src[j])
-		{
-			dst[i] = src[j];
-			i++;
-			j++;
-		}
-		dst[i] = '\0';
-		return (size);
-	}
-	while (len_dst < size - 1)
-		dst[len_dst] = src[i++];
-	return (len_dst + len_src);
-}*/
-
+//PAS OUF NON PLUS
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	len_dst;

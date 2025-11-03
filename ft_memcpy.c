@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 10:28:46 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 10:42:56 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 22:56:28 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
-	char	*d;
-	char	*s;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	d = (char *)dest;
-	s = (char *)src;
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
 	i = 0;
 	while (i < n)
 	{

@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:11:12 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 10:42:54 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 22:57:34 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// PAS OUF OUF ON DIRAIT
 #include "libft.h"
 #include <string.h>
 #include <stdio.h>
