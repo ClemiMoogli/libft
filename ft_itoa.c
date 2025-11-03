@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 16:29:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 15:28:16 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:36:15 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ char	*ft_itoa(int n)
 	ptr = malloc(ft_lenptr(n) + 1 * sizeof(char));
 	if (n < 0)
 	{
+		if (n == 0)
+			return ("0");
 		if (n == -2147483648)
 			return ("-2147483648");
 		else
@@ -64,8 +66,12 @@ char	*ft_itoa(int n)
 			i++;
 		}
 	}
-	if (n / 10 <= 9)
-		ptr[i] = n % 10;
+	if (n > 9)
+	{
+		ft_itoa(n / 10);
+	}
+	ft_itoa(n / 10);
+	return (ptr);
 }
 
 int main()
