@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 16:29:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 10:42:59 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:47:21 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,48 +36,10 @@ int ft_power(int n, int p)
     return (result);
 }
 
-char    *ft_itoa(int n)
-{
-    char    *ptr;
-    int     i;
-    int     sign;
-    int     nb;
-
-    i = 0;
-    sign = 1;
-    // gerer le int min
-    if (n == -2147483648)
-        return ("-2147483648");
-    // gerer les nonbres negatifs
-    if (n < 0)
-    {
-        n *= -1;
-        sign = -1;
-    }
-    if (sign == -1)
-        ptr = malloc(ft_int_len(n, 10) + 2 * sizeof(char));
-    else
-        ptr = malloc(ft_int_len(n, 10) + 1 * sizeof(char));
-    if (!ptr)
-        return (NULL);
-    // affichage nombre
-    if (sign == -1);
-    {
-        ptr[0] = '-';
-        i++;
-    }
-    while (i < ft_int_len(n, 10))
-    {
-        
-    }
-    ptr[i] = '\0';
-        return (ptr);
-}
-
 
 // gerer le cas, si nomnre == 0;
 // Ajouter le if nombre negatif alors ajouter '-' devant et malloc + 1;
-/*char    *ft_itoa(int n)
+char    *ft_itoa(int n)
 {
    int  i;
    int sign;
@@ -92,7 +54,7 @@ char    *ft_itoa(int n)
        sign = 1;
        n = n * -1;
    }
-   power = calculate_power(n, 0);
+   power = ft_int_len(n, 0);
    if (sign == 1)
         len_s = power + 1;
     else 
@@ -122,7 +84,7 @@ char    *ft_itoa(int n)
    }
     ptr[i] = '\0';
     return (ptr);
-}*/
+}
 
 /*
 int main()
