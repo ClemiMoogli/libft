@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:36:12 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/10/28 15:48:47 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:42:48 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <bsd/string.h>
 #include <stdio.h>
 
@@ -47,7 +48,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (len_dst + len_src);
 }
 
-
+/*
 int	main(){
 	char	dest[50] = "Hello";
 	char	dest2[50] = "Hello";
@@ -66,6 +67,6 @@ int	main(){
 	printf("Vrai: %s\n", dest2);
 	return (0);
 }
+*/
 
 
-// 

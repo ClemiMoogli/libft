@@ -6,10 +6,11 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 09:57:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/10/31 11:28:22 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:42:41 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -30,7 +31,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     ptr[i] = '\0';
     return (ptr);
 }
-
+/*
 int main()
 {
     char            s[50] = "Ceci est un test de fonction!";
@@ -39,4 +40,4 @@ int main()
 
     printf("PERSO: %s\n", ft_substr(s, start, len));
     return (0);
-}
+}*/

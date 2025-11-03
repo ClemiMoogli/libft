@@ -1,43 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 10:28:46 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 10:42:56 by cjeannin         ###   ########.fr       */
+/*   Created: 2025/11/03 10:41:34 by cjeannin          #+#    #+#             */
+/*   Updated: 2025/11/03 10:42:46 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
-#include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
-	char	*d;
-	char	*s;
+    int     i;
+    char    *ptr;
 
-	d = (char *)dest;
-	s = (char *)src;
-	i = 0;
-	while (i < n)
-	{
-		d[i] = s[i];
-		i++;
-	}
-	return (dest);
+    i = 0;
+    ptr = malloc((ft_strlen(s) + 1) * sizeof(char));
+    if (!ptr)
+        return (NULL);
+    while (s[i])
+    {
+        ptr[i] = f(i, s[i]);
+        i++;
+    }
+    ptr[i] = '\0';
+    return (ptr);
 }
 /*
-int	main()
+int main()
 {
-	char	src[50] = "Helloo World";
-	char	dest[50] = "Ceci est la chaine de dest";
-
-	printf("%s\n", dest);
-	ft_memcpy(dest, src, 4);;
-	printf("%s\n", dest);
-	return (0);
+    char    s[] = "Test";
+    printf("PERSO: %s\n", ft_strmapi());
+    return (0);
 }*/

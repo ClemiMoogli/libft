@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/03 10:40:53 by cjeannin          #+#    #+#             */
+/*   Updated: 2025/11/03 10:42:51 by cjeannin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 #include <string.h>
 #include <stdio.h>
 
@@ -18,7 +31,7 @@ char    *ft_strchr(const char *s, int c)
     }
     return (NULL);
 }
-
+/*
 int main()
 {
     char    str[50] = "Ceci est un Zigoto pour tester";
@@ -26,4 +39,4 @@ int main()
     printf("PERSO: %s\n", ft_strchr(str, c));
     printf("VRAI: %s\n", strchr(str, c));
     return (0);
-}
+}*/

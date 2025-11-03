@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:57:37 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/10/28 10:26:35 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:43:06 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)

@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 10:05:38 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/10/30 10:33:54 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:42:57 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -29,7 +30,7 @@ int	ft_memcmp(const	void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
+/*
 int	main()
 {
 	char	s1[50] = "ABCAA";
@@ -38,4 +39,4 @@ int	main()
 	printf("PERSO: %d\n", ft_memcmp(s1, s2, n));
 	printf("VRAI: %d\n", memcmp(s1, s2, n));
 	return (0);
-}
+}*/

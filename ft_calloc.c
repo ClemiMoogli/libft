@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:25:15 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/10/30 15:01:02 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:43:05 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -28,7 +29,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 			((int *)ptr)[i++] = 0;
 	return (ptr);
 }
-
+/*
 int	main()
 {
 	int		*ptr;
@@ -54,4 +55,4 @@ int	main()
 		i++;
 	}
 	return (0);
-}
+}*/

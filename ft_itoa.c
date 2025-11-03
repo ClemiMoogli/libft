@@ -6,18 +6,19 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 16:29:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/10/31 17:15:23 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:42:59 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-int calculate_power(int nb, int p)
+int ft_int_len(int nb, int p)
 {
     if ((nb / 10) <= 0)
         return (p);
-    return (calculate_power(nb/10, p + 1));
+    return (ft_int_len(nb/10, p + 1));
 }
 
 int ft_power(int n, int p)
@@ -35,10 +36,48 @@ int ft_power(int n, int p)
     return (result);
 }
 
+char    *ft_itoa(int n)
+{
+    char    *ptr;
+    int     i;
+    int     sign;
+    int     nb;
+
+    i = 0;
+    sign = 1;
+    // gerer le int min
+    if (n == -2147483648)
+        return ("-2147483648");
+    // gerer les nonbres negatifs
+    if (n < 0)
+    {
+        n *= -1;
+        sign = -1;
+    }
+    if (sign == -1)
+        ptr = malloc(ft_int_len(n, 10) + 2 * sizeof(char));
+    else
+        ptr = malloc(ft_int_len(n, 10) + 1 * sizeof(char));
+    if (!ptr)
+        return (NULL);
+    // affichage nombre
+    if (sign == -1);
+    {
+        ptr[0] = '-';
+        i++;
+    }
+    while (i < ft_int_len(n, 10))
+    {
+        
+    }
+    ptr[i] = '\0';
+        return (ptr);
+}
+
 
 // gerer le cas, si nomnre == 0;
 // Ajouter le if nombre negatif alors ajouter '-' devant et malloc + 1;
-char    *ft_itoa(int n)
+/*char    *ft_itoa(int n)
 {
    int  i;
    int sign;
@@ -59,11 +98,13 @@ char    *ft_itoa(int n)
     else 
         len_s = power;
    ptr = malloc((len_s + 1) * sizeof(char));
+   printf("len_s: %d\n", len_s);
    if (!ptr)
        return (NULL);
    while (i <= len_s)
    {
-       printf("len_s : %d\n", len_s);
+        //printf("len_s : %d\n", len_s);
+        //printf("i : %d\n", i);
        if (i == 0 && sign == 1)
        {
            ptr[i] = '-';
@@ -81,13 +122,14 @@ char    *ft_itoa(int n)
    }
     ptr[i] = '\0';
     return (ptr);
-}
+}*/
 
+/*
 int main()
 {
     char    *result;
-    result = ft_itoa(12456);
+    result = ft_itoa(1245611);
     printf("Calculate power %s\n", result);
     free(result);
     return (0);
-}
+}*/

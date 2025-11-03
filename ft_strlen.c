@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 14:09:09 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/10/27 15:09:26 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:42:46 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 #include <stddef.h>
 
 size_t	ft_strlen(const char *s)

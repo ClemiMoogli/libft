@@ -6,10 +6,11 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:15:37 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/10/31 17:12:38 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:42:52 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -86,7 +87,7 @@ char    **ft_split(char const *s, char c)
     ptr[index_ptr] = (char *)'\0';
     return (ptr);
 }
-
+/*
 int main()
 {
     char    s[50] = "Ceci est | un test || encore un ||";
@@ -103,4 +104,4 @@ int main()
     printf("%s\n", result[5]);
     printf("%s\n", result[5]);
     return (0);
-}
+}*/

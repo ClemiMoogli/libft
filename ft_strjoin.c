@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:28:38 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/10/31 11:55:13 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:42:49 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ char    *ft_strjoin(char const *s1, char const *s2)
     return (ptr);
 }
 
-
+/*
 int main()
 {
     char            s1[50] = "Ceci est un test de fonction!";
     char            s2[50] = "Un petit cat!";
     printf("PERSO: %s\n", ft_strjoin(s1, s2));
     return (0);
-}
+}*/

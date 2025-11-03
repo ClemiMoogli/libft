@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 12:33:04 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/10/28 13:35:23 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:42:47 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <bsd/string.h>
 #include <stdio.h>
 

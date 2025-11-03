@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/03 10:40:21 by cjeannin          #+#    #+#             */
+/*   Updated: 2025/11/03 10:42:58 by cjeannin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 #include <bsd/string.h>
 #include <stdio.h>
 
@@ -18,7 +31,7 @@ void    *ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
+/*
 int	main()
 {
 	char	data[20] = {  1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -32,4 +45,4 @@ int	main()
 	printf("PERSO: %s\n", resultP);
 	printf("PERSO: %s\n", resultV);
 	return (0);
-}
+}*/

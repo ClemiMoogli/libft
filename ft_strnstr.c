@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 10:35:32 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/10/30 11:17:38 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:42:43 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <bsd/string.h>
 
@@ -45,7 +46,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
+/*
 int	main()
 {
 	char	big[50] = "Foo Bar Baz";
@@ -54,4 +55,4 @@ int	main()
 	printf("PERSO: %s \n", ft_strnstr(big, little, n));
 	printf("VRAI:  %s \n", strnstr(big, little, n));
 	return (0);
-}
+}*/

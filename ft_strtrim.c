@@ -6,10 +6,11 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:55:42 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/10/31 14:08:28 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:42:38 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -83,7 +84,7 @@ char    *ft_strtrim(char const*s1, char const *set)
     ptr[i] = '\0';
     return (ptr);
 }
-
+/*
 int main()
 {
     char    s1[50] = "  ceci est un test  ";
@@ -92,4 +93,4 @@ int main()
     printf("Index fin: %d\n", ft_endingIndex(s1, set));
     printf("PERSO: %s\n", ft_strtrim(s1, set));
     return (0);
-}
+}*/
