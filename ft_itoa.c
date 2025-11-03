@@ -86,7 +86,7 @@ char    *ft_itoa(int n)
 int main()
 {
     char    *result;
-    result = ft_itoa(0);
+    result = ft_itoa(12456);
     printf("Calculate power %s\n", result);
     free(result);
     return (0);
