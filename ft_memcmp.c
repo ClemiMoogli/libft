@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 10:05:38 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 10:42:57 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:23:28 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@ int	ft_memcmp(const	void *s1, const void *s2, size_t n)
 	size_t			i;
 	unsigned char	c1;
 	unsigned char	c2;
+
 	i = 0;
 	while (i < n)
 	{
 		c1 = ((unsigned char *)s1)[i];
 		c2 = ((unsigned char *)s2)[i];
 		if (((int)c1 - (int)c2) != 0)
-			return ((int)c1 - (int)c2) ;
+			return ((int)c1 - (int)c2);
 		i++;
 	}
 	return (0);

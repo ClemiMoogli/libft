@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 10:40:21 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 10:42:58 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 14:56:51 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <bsd/string.h>
 #include <stdio.h>
 
-void    *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
 	char	*result;

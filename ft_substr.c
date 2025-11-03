@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 09:57:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 10:42:41 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:03:22 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char    *ptr;
-    size_t  i;
+	char	*ptr;
+	size_t	i;
 
-    i = 0;
-    ptr = malloc((len + 1) * sizeof(char));
-    if (!ptr)
-        return (NULL);
-    while(i < len && s[start + i])
-    {
-        ptr[i] = ((char *)s)[start + i];
-        i++;
-    }
-    ptr[i] = '\0';
-    return (ptr);
+	i = 0;
+	ptr = malloc((len + 1) * sizeof(char));
+	if (!ptr)
+		return (NULL);
+	while (i < len && s[start + i])
+	{
+		ptr[i] = ((char *)s)[start + i];
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }
 /*
 int main()

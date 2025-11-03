@@ -1,41 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 10:41:53 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 15:50:34 by cjeannin         ###   ########.fr       */
+/*   Created: 2025/11/03 11:32:30 by cjeannin          #+#    #+#             */
+/*   Updated: 2025/11/03 15:26:16 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
+#include <unistd.h>
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int		i;
-	char	*result;
+	int	i;
 
 	i = 0;
-	while (s[i])
+	while (i < ft_strlen(s))
 	{
-		if (s[i] == c)
-			result = (char *)&s[i];
+		write(fd, s[i], 1);
 		i++;
 	}
-	if (result[0] == c)
-		return (result);
-	return (NULL);
+	write(fd, '\n', 1);
 }
-/*
-int main()
-{
-    char    str[50] = "un Zebre a ete aperZU dans le jardin";
-    int     c = 'Z';
-    printf("PERSO: %s\n", ft_strrchr(str, c));
-    printf("VRAI: %s\n", strrchr(str, c));
-    return (0);
-}*/

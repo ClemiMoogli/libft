@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 10:41:53 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 15:50:34 by cjeannin         ###   ########.fr       */
+/*   Created: 2025/11/03 11:36:13 by cjeannin          #+#    #+#             */
+/*   Updated: 2025/11/03 15:22:40 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
+#include <unistd.h>
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int		i;
-	char	*result;
+	char	result;
 
-	i = 0;
-	while (s[i])
+	if (n < 0)
 	{
-		if (s[i] == c)
-			result = (char *)&s[i];
-		i++;
+		if (n == -2147483648)
+			write(fd, "-2147483648", 11);
+		else
+		{
+			n = -n;
+			write(fd, "-", 1);
+		}
 	}
-	if (result[0] == c)
-		return (result);
-	return (NULL);
+	if (n > 9)
+		ft_putnbr_fd(n / 10, fd);
+	result = (n % 10) + '0';
+	write(fd, &result, 1);
 }
 /*
 int main()
 {
-    char    str[50] = "un Zebre a ete aperZU dans le jardin";
-    int     c = 'Z';
-    printf("PERSO: %s\n", ft_strrchr(str, c));
-    printf("VRAI: %s\n", strrchr(str, c));
+    ft_putnbr_fd(-123,1);
     return (0);
 }*/

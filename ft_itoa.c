@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 16:29:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 10:47:21 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:28:16 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,84 +14,65 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int ft_int_len(int nb, int p)
+int	ft_lenptr(int nb)
 {
-    if ((nb / 10) <= 0)
-        return (p);
-    return (ft_int_len(nb/10, p + 1));
+	int	p;
+
+	p = 0;
+	if (nb < 0)
+		p++;
+	while ((nb / 10) > 0)
+	{
+		nb = nb / 10;
+		p++;
+	}
+	return (p);
 }
 
-int ft_power(int n, int p)
+int	ft_power(int n, int p)
 {
-    int i;
-    int result;
+	int	i;
+	int	result;
 
-    i = 1;
-    result = n;
-    while (i < p)
-    {
-        result = result * n;
-        i++;
-    }
-    return (result);
+	i = 1;
+	result = n;
+	while (i < p)
+	{
+		result = result * n;
+		i++;
+	}
+	return (result);
 }
-
 
 // gerer le cas, si nomnre == 0;
 // Ajouter le if nombre negatif alors ajouter '-' devant et malloc + 1;
-char    *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-   int  i;
-   int sign;
-   int  power;
-   int  len_s;
-   char  *ptr;
-   
-   i = 0;
-   sign = 0;
-   if (n < 0)
-   {
-       sign = 1;
-       n = n * -1;
-   }
-   power = ft_int_len(n, 0);
-   if (sign == 1)
-        len_s = power + 1;
-    else 
-        len_s = power;
-   ptr = malloc((len_s + 1) * sizeof(char));
-   printf("len_s: %d\n", len_s);
-   if (!ptr)
-       return (NULL);
-   while (i <= len_s)
-   {
-        //printf("len_s : %d\n", len_s);
-        //printf("i : %d\n", i);
-       if (i == 0 && sign == 1)
-       {
-           ptr[i] = '-';
-           i++;
-       }
-       if (n / ft_power(10, power) <= 0)
-       {
-           ptr[i] = (n % ft_power(10, power)) + '0';
-           i++;
-       }
-       ptr[i] = (n / ft_power(10, power)) + '0';
-       n = n % ft_power(10, power);
-       i++;
-       power--;
-   }
-    ptr[i] = '\0';
-    return (ptr);
+	char	*ptr;
+	int		i;
+
+	i = 0;
+	ptr = malloc(ft_lenptr(n) + 1 * sizeof(char));
+	if (n < 0)
+	{
+		if (n == -2147483648)
+			return ("-2147483648");
+		else
+		{
+			ptr[i] = '-';
+			n = -n;
+			i++;
+		}
+	}
+	if (n / 10 <= 9)
+		ptr[i] = n % 10;
 }
 
-/*
 int main()
 {
-    char    *result;
-    result = ft_itoa(1245611);
-    printf("Calculate power %s\n", result);
-    free(result);
-    return (0);
-}*/
+	char    *result;
+	result = ft_itoa(1245611);
+	printf("Calculate power %s\n", result);
+	free(result);
+	return (0);
+}

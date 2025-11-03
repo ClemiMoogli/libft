@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:36:12 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 10:42:48 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:58:16 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <bsd/string.h>
 #include <stdio.h>
 
+/*
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	len_dst;
@@ -29,7 +30,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		len_dst++;
 	while (src[len_src])
 		len_src++;
-	// on va rencontrer le null terminator
 	if (size > (len_dst + len_src))
 	{
 		i = len_dst;
@@ -40,9 +40,36 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 			j++;
 		}
 		dst[i] = '\0';
-		return (size); 
+		return (size);
 	}
-	// on ne rencontre pas le null
+	while (len_dst < size - 1)
+		dst[len_dst] = src[i++];
+	return (len_dst + len_src);
+}*/
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t	len_dst;
+	size_t	len_src;
+	size_t	i;
+	size_t	j;
+
+	len_dst = 0;
+	len_src = 0;
+	j = 0;
+	i = 0;
+	len_dst = ft_strlen(dst);
+	len_src = ft_strlen(src);
+	if (size > (len_dst + len_src))
+	{
+		i = len_dst;
+		while (src[j])
+		{
+			dst[i++] = src[j++];
+		}
+		dst[i] = '\0';
+		return (size);
+	}
 	while (len_dst < size - 1)
 		dst[len_dst] = src[i++];
 	return (len_dst + len_src);
@@ -68,5 +95,3 @@ int	main(){
 	return (0);
 }
 */
-
-

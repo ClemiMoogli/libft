@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:20:51 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 10:43:07 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 14:57:43 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_atoi(const char *nptr)
 {
 	int	result;
 	int	i;
-	int sign;
+	int	sign;
 
 	sign = 1;
 	i = 0;

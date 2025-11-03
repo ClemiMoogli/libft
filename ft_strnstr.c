@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 10:35:32 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 10:42:43 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:23:06 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	size_t	len_little;
 	char	*result;
 
 	i = 0;
 	j = 0;
-	len_little = 0;
-	while(little[len_little])
-		len_little++;
-	if (len_little == 0)
+	if (ft_strlen(little) == 0)
 		return ((char *)big);
 	while (i < len)
 	{
@@ -38,7 +34,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 				i++;
 				j++;
 			}
-			if (j == len_little)
+			if (j == ft_strlen(little))
 				return (result);
 		}
 		i++;
