@@ -1,20 +1,18 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile.txt                                       :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+         #
+#    By: clement <clement@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/03 15:46:49 by cjeannin          #+#    #+#              #
-#    Updated: 2025/11/03 15:46:51 by cjeannin         ###   ########.fr        #
+#    Updated: 2025/11/04 08:53:38 by clement          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-.SILENT:
 NAME= libft.a
 CC=cc
 CFLAGS= -Wall -Werror -Wextra
-OBJ= $(SRC:.c=.o)
 SRC=ft_atoi.c \
 	ft_bzero.c \
 	ft_calloc.c \
@@ -29,14 +27,14 @@ SRC=ft_atoi.c \
 	ft_memcpy.c \
 	ft_memmove.c \
 	ft_memset.c \
-	ft_putchar_fd \
-	ft_putendl_fd \
-	ft_putnbr_fd \
+	ft_putchar_fd.c \
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c \
 	ft_putstr_fd.c \
 	ft_split.c \
 	ft_strchr.c \
 	ft_strdup.c \
-	ft_striteri \
+	ft_striteri.c \
 	ft_strjoin.c \
 	ft_strlcat.c \
 	ft_strlcpy.c \
@@ -50,11 +48,15 @@ SRC=ft_atoi.c \
 	ft_tolower.c \
 	ft_toupper.c
 
+OBJ= $(SRC:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $@ $(OBJ)
-#$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	ar rcs $(NAME) $(OBJ)
+
+%.o: %.cc
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)
@@ -63,4 +65,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-                                                          
+
+.PHONY: all clean fclean re                                                    

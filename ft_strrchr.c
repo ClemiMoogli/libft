@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 10:41:53 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 15:50:34 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/04 08:37:06 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// KO AUSSI
 #include "libft.h"
 #include <string.h>
 #include <stdio.h>
