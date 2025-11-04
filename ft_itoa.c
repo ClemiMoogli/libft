@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 16:29:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/04 11:03:38 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/04 22:12:53 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int	ft_lenptr(int nb)
 	long	tmp;
 	int		len;
 
-	tmp = long(nb);
+	len = 0;
+	tmp = (long)nb;
 	if (tmp <= 0)
 		len = 1;
 	if (tmp < 0)
@@ -52,7 +53,7 @@ char	*ft_itoa(int n)
 	
 	return (ptr);
 }
-
+/*
 int main()
 {
 	char    *result;
@@ -60,4 +61,4 @@ int main()
 	printf("Calculate power %s\n", result);
 	free(result);
 	return (0);
-}
+}/*

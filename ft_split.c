@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:15:37 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/04 13:30:18 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/04 23:16:10 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	count_word(const char *s, char sep)
 			j++;
 		i++;
 	}
-	return (j + 1);
+	return (j);
 }
 
 char	*insert_word(char *ptr, const char *s, char sep, int index)
@@ -86,7 +86,7 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-	ptr[index_ptr] = (char *) '\0';
+	ptr[index_ptr] = NULL;
 	return (ptr);
 }
 /*

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 10:41:53 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/04 16:05:18 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/04 23:20:13 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,20 @@ char	*ft_strrchr(const char *s, int c)
 	int		i;
 	char	*result;
 
+	result = NULL;
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (const char)c)
 			result = (char *)&s[i];
 		i++;
 	}
-	return (NULL);
+	if ((char)c == '\0')
+		return ((char *)&s[i]);
+	return (result);
 }
 
-
+/*
 int main() {
     char str[] = "Hello";
     char *result1;
@@ -44,7 +47,7 @@ int main() {
     //if (result2 != &str[5]) return 1;
 
     return 0;
-}
+}/*
 /*
 int main()
 {
