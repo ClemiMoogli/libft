@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:28:38 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 15:27:01 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/04 10:12:12 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	if (ft_strlen(s1) == NULL && ft_strlen(s2) == NULL)
+	if (!(s1) || !(s2))
 		return (NULL);
 	ptr = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (!ptr)

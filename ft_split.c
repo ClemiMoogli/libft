@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:15:37 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 15:31:26 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/04 13:30:18 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	index_ptr = 0;
+	if (!s)
+		return (NULL);
 	nb_word = count_word(s, c);
 	ptr = malloc((nb_word + 1) * sizeof(char *));
 	if (!ptr)
@@ -90,12 +92,12 @@ char	**ft_split(char const *s, char c)
 /*
 int main()
 {
-	char    s[50] = "Ceci est | un test || encore un ||";
+	char    *s = NULL;
 	char    c = '|';
 	char    **result;
 
 	result = ft_split(s, c);
-	//printf("Count word : %d\n", count_word(s, c));
+	printf("Count word : %s\n",result);
 	printf("%s\n", result[0]);
 	printf("%s\n", result[1]);
 	printf("%s\n", result[2]);

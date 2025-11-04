@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:25:15 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 14:57:35 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/04 15:57:36 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void	*ft_calloc(size_t nmemb, size_t size)
+/* void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 	size_t	i;
@@ -28,7 +28,27 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	while (i < size)
 		((int *)ptr)[i++] = 0;
 	return (ptr);
+} */
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	unsigned char	*ptr;
+	size_t			i;
+	size_t			total;
+
+	total = nmemb * size;
+	if ((nmemb == 0) || ((total / nmemb) != size))
+		return (NULL);
+	ptr = malloc(total);
+	if (!ptr)
+		return (NULL);
+	i = 0;
+	while (i < total)
+		ptr[i++] = 0;
+	return (ptr);
 }
+
+
 /*
 int	main()
 {
@@ -39,10 +59,12 @@ int	main()
 	size_t	i;
 
 	i = 0;
-	nmemb = 10;
-	size  = 8;
+	nmemb = 0;
+	size  = sizeof(int);
 	ptr = (int *)ft_calloc(nmemb, size);
 	ptr2 = (int *)calloc(nmemb, size);
+	printf("%d\n",ptr[0]);
+	printf("%d\n",ptr2[0]);
 	while (ptr[i])
 	{
 		printf("PERSO: %d\n", ptr[i]);

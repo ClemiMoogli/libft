@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 16:29:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/04 09:21:43 by clement          ###   ########.fr       */
+/*   Updated: 2025/11/04 11:03:38 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,6 @@ int	ft_lenptr(int nb)
 	return (len);
 }
 
-void	write_digits(long nb, char *ptr, int i)
-{
-	if (nb > 9)
-		write_digits(nb / 10, ptr, i+1)
-	ptr[i]
-}
-
 char	*ft_itoa(int n)
 {
 	char	*ptr;
@@ -49,13 +42,14 @@ char	*ft_itoa(int n)
 	i = 0;
 	len = ft_lenptr(n);
 	ptr = malloc((len + 1) * sizeof(char));
-	nb = long(n);
+	nb = (long)n;
 	if (nb < 0)
 	{
 		ptr[0] = '-';
 		nb = -nb;
 		i = 1;
-	}
+	}..
+	
 	return (ptr);
 }
 

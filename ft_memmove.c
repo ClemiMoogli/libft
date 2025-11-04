@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:11:12 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 22:57:34 by clement          ###   ########.fr       */
+/*   Updated: 2025/11/04 11:29:08 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// PAS OUF OUF ON DIRAIT
 #include "libft.h"
 #include <string.h>
 #include <stdio.h>
@@ -20,29 +19,41 @@ void	*ft_memmove(void *dest, const void *src, size_t size)
 	size_t	i;
 	char	*d;
 	char	*s;
-	char	tmp;
 
 	d = (char *)dest;
 	s = (char *)src;
 	i = 0;
-	while (i < size)
+	if (d < s)
 	{
-		tmp = s[i];
-		d[i] = tmp;
-		tmp = '\0';
-		i++;
+		while (i < size)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	else
+	{
+		while (size > i)
+		{
+			size--;
+			d[size] = s[size];
+		}
 	}
 	return (dest);
 }
 
 /*
-int	main()
-{
-	char	src[50] = "Helloo World";
-	char	dest[50] = "Ceci est la chaine de dest";
+int main() {
+    char buffer1[] = "abcdefghijklmnop";
+    char buffer2[] = "abcdefghijklmnop";
+	int	result;
+    // Décalage vers la droite (overlap)
+    memmove(buffer1 + 2, buffer1, 10);
+    ft_memmove(buffer2 + 2, buffer2, 10);
 
-	printf("%s\n", dest);
-	ft_memmove(dest, src, 4);;
-	printf("%s\n", dest);
-	return (0);
-}*/
+    if (strcmp(buffer1, buffer2) != 0) return 1;
+	result = strcmp(buffer1, buffer2);
+	printf("%d\n", result);
+    return 0;
+}
+*/

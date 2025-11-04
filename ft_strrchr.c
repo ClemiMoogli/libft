@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 10:41:53 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/04 08:37:06 by clement          ###   ########.fr       */
+/*   Updated: 2025/11/04 16:05:18 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,28 @@ char	*ft_strrchr(const char *s, int c)
 			result = (char *)&s[i];
 		i++;
 	}
-	if (result[0] == c)
-		return (result);
 	return (NULL);
+}
+
+
+int main() {
+    char str[] = "Hello";
+    char *result1;
+	char *result2;
+
+    result1 = strrchr(str, '\\0');
+    result2 = ft_strrchr(str, '\\0');
+
+	printf("%s\n", result2);
+    //if (result1 != result2) return 1;
+    //if (result2 != &str[5]) return 1;
+
+    return 0;
 }
 /*
 int main()
 {
-    char    str[50] = "un Zebre a ete aperZU dans le jardin";
+    char    str[] = "";
     int     c = 'Z';
     printf("PERSO: %s\n", ft_strrchr(str, c));
     printf("VRAI: %s\n", strrchr(str, c));

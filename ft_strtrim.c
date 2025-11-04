@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:55:42 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 15:42:02 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/04 14:00:17 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ char	*ft_strtrim(char const*s1, char const *set)
 	char	*ptr;
 
 	i = 0;
+	if (!set || !s1 ||ft_strlen(set) == 0)
+		return ((char *)s1);
 	index_debut = ft_startingindex(s1, set);
 	index_fin = ft_endingindex(s1, set);
 	len_ptr = index_fin - index_debut;
@@ -87,7 +89,7 @@ char	*ft_strtrim(char const*s1, char const *set)
 int main()
 {
 	char    s1[50] = "  ceci est un test  ";
-	char    set[50] = " ";
+	char    set[50] = "";
 	printf("Index debut: %d\n", ft_startingindex(s1, set));
 	printf("Index fin: %d\n", ft_endingindex(s1, set));
 	printf("PERSO: %s\n", ft_strtrim(s1, set));

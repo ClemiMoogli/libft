@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 09:57:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 15:03:22 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/04 14:05:29 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	ptr = malloc((len + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
@@ -31,13 +33,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
-/*
+
 int main()
 {
-    char            s[50] = "Ceci est un test de fonction!";
-    unsigned int    start = 3;
+    char            s[50] = "test";
+    unsigned int    start = 10;
     size_t          len = 10;
 
     printf("PERSO: %s\n", ft_substr(s, start, len));
     return (0);
-}*/
+}

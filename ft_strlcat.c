@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:36:12 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 23:00:56 by clement          ###   ########.fr       */
+/*   Updated: 2025/11/04 11:53:09 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include <bsd/string.h>
 #include <stdio.h>
 
-//PAS OUF NON PLUS
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	len_dst;
@@ -22,8 +21,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	j;
 
-	len_dst = 0;
-	len_src = 0;
 	j = 0;
 	i = 0;
 	len_dst = ft_strlen(dst);
@@ -33,14 +30,20 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i = len_dst;
 		while (src[j])
 		{
-			dst[i++] = src[j++];
+			dst[i] = src[j];
+			i++;
+			j++;
 		}
 		dst[i] = '\0';
 		return (size);
 	}
 	while (len_dst < size - 1)
-		dst[len_dst] = src[i++];
-	return (len_dst + len_src);
+	{
+		dst[len_dst] = src[i];
+		i++;
+		len_dst++;
+	}
+		return (len_dst + len_src);
 }
 
 /*
@@ -61,5 +64,4 @@ int	main(){
 	printf("Perso: %s\n",dest);
 	printf("Vrai: %s\n", dest2);
 	return (0);
-}
-*/
+}*/
