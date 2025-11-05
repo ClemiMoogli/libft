@@ -6,7 +6,7 @@
 #    By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/03 15:46:49 by cjeannin          #+#    #+#              #
-#    Updated: 2025/11/05 10:21:32 by cjeannin         ###   ########.fr        #
+#    Updated: 2025/11/05 15:57:21 by cjeannin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,8 @@ SRC=ft_atoi.c \
 	ft_tolower.c \
 	ft_toupper.c
 
+BONUS=ft_lstnew.c
+
 OBJ= $(SRC:.c=.o)
 
 all: $(NAME)
@@ -55,7 +57,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-%.o: %.cc
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
@@ -65,5 +67,8 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+bonus:
+	$(CC)$(CFLAGS) $(BONUS)
 
 .PHONY: all clean fclean re                                                    
