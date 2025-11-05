@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:15:37 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/04 23:16:10 by clement          ###   ########.fr       */
+/*   Updated: 2025/11/05 13:34:43 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,25 @@ int	is_word(const char *s, char sep, int index)
 	return (0);
 }
 
-int	count_word(const char *s, char sep)
+int count_word(const char *s, char sep)
 {
 	int	i;
-	int	j;
+	int	nb;
+	char * str;
+
 
 	i = 0;
-	j = 0;
-	while (s[i])
+	nb = 0;
+	str = (char *)s;
+	while (str[i])
 	{
-		if (s[i] == sep)
-			j++;
+		if (i == 0 && (str[i] != sep))
+			nb++;
+		else if (i != 0 && (str[i - 1] == sep && str[i] != sep))
+			nb++;
 		i++;
 	}
-	return (j);
+	return (nb);
 }
 
 char	*insert_word(char *ptr, const char *s, char sep, int index)
@@ -62,6 +67,25 @@ char	*insert_word(char *ptr, const char *s, char sep, int index)
 	return (ptr);
 }
 
+void	ft_clean_ptr(char** ptr)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while(ptr[i])
+	{
+		while(ptr[i][j])
+		{
+			free(ptr[i]);
+			j++;
+		}
+		i++;
+		j = 0;
+	}
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		nb_word;
@@ -82,6 +106,8 @@ char	**ft_split(char const *s, char c)
 		if (is_word(s, c, i))
 		{
 			ptr[index_ptr] = insert_word(ptr[index_ptr], s, c, i);
+			if (!ptr[index_ptr])
+				ft_clean_ptr(ptr);
 			index_ptr++;
 		}
 		i++;
@@ -92,12 +118,12 @@ char	**ft_split(char const *s, char c)
 /*
 int main()
 {
-	char    *s = NULL;
-	char    c = '|';
+	char    s[] = "|||Ceci est un | test ||grandeur nature|||";
+	char    c = ' ';
 	char    **result;
 
+	printf("count word: %d\n", count_word(s, c));
 	result = ft_split(s, c);
-	printf("Count word : %s\n",result);
 	printf("%s\n", result[0]);
 	printf("%s\n", result[1]);
 	printf("%s\n", result[2]);

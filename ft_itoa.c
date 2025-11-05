@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 16:29:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/04 22:12:53 by clement          ###   ########.fr       */
+/*   Updated: 2025/11/05 10:12:43 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,29 +36,37 @@ int	ft_lenptr(int nb)
 char	*ft_itoa(int n)
 {
 	char	*ptr;
-	int		len,
+	int		len;
 	long	nb;
 	int		i;
 
 	i = 0;
+	nb = (long)n;
 	len = ft_lenptr(n);
 	ptr = malloc((len + 1) * sizeof(char));
-	nb = (long)n;
+	ptr[len+1] = '\0';
+	if (!ptr)
+		return (NULL);
 	if (nb < 0)
 	{
 		ptr[0] = '-';
 		nb = -nb;
-		i = 1;
-	}..
-	
+		i++;
+	}
+	while (len > i)
+	{
+		ptr[len - 1] = (nb % 10) + '0';
+		nb = nb / 10;
+		len--;
+	}
 	return (ptr);
 }
 /*
 int main()
 {
 	char    *result;
-	result = ft_itoa(1245611);
-	printf("Calculate power %s\n", result);
+	result = ft_itoa(-2147483648);
+	printf("%s\n", result);
 	free(result);
 	return (0);
-}/*
+}*/

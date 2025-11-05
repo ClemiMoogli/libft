@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 10:41:53 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/04 23:20:13 by clement          ###   ########.fr       */
+/*   Updated: 2025/11/05 09:44:48 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ int main() {
     //if (result2 != &str[5]) return 1;
 
     return 0;
-}/*
-/*
+
+	
 int main()
 {
     char    str[] = "";

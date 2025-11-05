@@ -6,7 +6,7 @@
 #    By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/03 15:46:49 by cjeannin          #+#    #+#              #
-#    Updated: 2025/11/04 09:57:36 by cjeannin         ###   ########.fr        #
+#    Updated: 2025/11/05 10:21:32 by cjeannin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC=ft_atoi.c \
 	ft_isascii.c \
 	ft_isdigit.c \
 	ft_isprint.c \
+	ft_itoa.c \
 	ft_memchr.c \
 	ft_memcmp.c \
 	ft_memcpy.c \

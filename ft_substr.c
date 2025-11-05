@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 09:57:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/04 23:23:41 by clement          ###   ########.fr       */
+/*   Updated: 2025/11/05 12:14:06 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr = malloc((len + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
+	if ( (start > ft_strlen(s)))
+		return (ptr);
 	while (i < len && s[start + i])
 	{
 		ptr[i] = ((char *)s)[start + i];
@@ -34,12 +36,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (ptr);
 }
 
+/*
 int main()
 {
-    char            s[50] = "test";
+    char            s[] = "test";
     unsigned int    start = 10;
-    size_t          len = 10;
+    size_t          len = 3;
 
     printf("PERSO: %s\n", ft_substr(s, start, len));
     return (0);
-}
+}*/

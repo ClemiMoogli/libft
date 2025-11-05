@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:20:51 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/04 14:50:14 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/05 12:30:33 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@ int	ft_atoi(const char *nptr)
 	sign = 1;
 	i = 0;
 	result = 0;
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == ' ')
+		i++;
 	if (nptr[i] == '-')
 	{
 		sign *= -1;
 		i++;
 	}
-	while (nptr[i] == ' ' || nptr[i] == '+')
-	{
+	while (nptr[i] == '+')
 		i++;
-	}
 	while (nptr[i])
 	{
 		if (nptr[i] >= '0' && nptr[i] <= '9')
@@ -45,8 +45,9 @@ int	ft_atoi(const char *nptr)
 /*
 int	main()
 {
-	char	result[50] = "   \\t\\n  42";
+	char	result[50] = "25";
 	printf("PERSO: %d\n", ft_atoi(result));
 	printf("VRAI: %d\n", atoi(result));
 	return (0);
-}*/
+}
+*/
