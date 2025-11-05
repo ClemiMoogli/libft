@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:55:42 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 11:01:47 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/05 15:14:58 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	ft_is_sep(char c, char const *sep)
+static int	ft_is_sep(char c, char const *sep)
 {
 	int	i;
 
@@ -28,23 +28,27 @@ int	ft_is_sep(char c, char const *sep)
 	return (0);
 }
 
-int	ft_startingindex(char const *s1, char const *set)
+static int	ft_startingindex(char const *s1, char const *set)
 {
 	int	index;
 
 	index = 0;
 	while (ft_is_sep(s1[index], set))
 		index++;
+	if (index == (int)ft_strlen(s1))
+		index = 0;
 	return (index);
 }
 
-int	ft_endingindex(char const *s1, char const *set)
+static int	ft_endingindex(char const *s1, char const *set)
 {
 	int	index;
 	int	i;
 
 	i = 0;
 	index = -1;
+	if (!s1)
+		return (0);
 	while (s1[i])
 	{
 		if (ft_is_sep(s1[i], set))
@@ -56,6 +60,8 @@ int	ft_endingindex(char const *s1, char const *set)
 			index = -1;
 		i++;
 	}
+	if (index == -1)
+		index = ft_strlen(s1);
 	return (index);
 }
 
@@ -69,7 +75,7 @@ char	*ft_strtrim(char const*s1, char const *set)
 
 	i = 0;
 	if (!set || !s1)
-		return ((char *)s1);
+		return (NULL);
 	index_debut = ft_startingindex(s1, set);
 	index_fin = ft_endingindex(s1, set);
 	len_ptr = index_fin - index_debut;
@@ -88,8 +94,8 @@ char	*ft_strtrim(char const*s1, char const *set)
 /*
 int main()
 {
-	char    s1[50] = "";
-	char    set[50] = "";
+    char *s1 = "aaabbbccc";
+    char *set = "abc";
 	printf("Index debut: %d\n", ft_startingindex(s1, set));
 	printf("Index fin: %d\n", ft_endingindex(s1, set));
 	printf("PERSO: %s\n", ft_strtrim(s1, set));

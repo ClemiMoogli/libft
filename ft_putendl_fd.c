@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 11:32:30 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 09:43:25 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/05 15:39:37 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putendl_fd(char *s, int fd)
 
 	i = 0;
 	if (!s)
-		return;
+		return ;
 	while (i < ft_strlen(s))
 	{
 		write(fd, &s[i], 1);

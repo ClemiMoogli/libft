@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:36:12 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/04 11:53:09 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/05 15:34:53 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 		len_dst++;
 	}
-		return (len_dst + len_src);
+	return (len_dst + len_src);
 }
 
 /*
@@ -64,4 +64,5 @@ int	main(){
 	printf("Perso: %s\n",dest);
 	printf("Vrai: %s\n", dest2);
 	return (0);
-}*/
+}
+*/

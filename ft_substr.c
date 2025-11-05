@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 09:57:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 12:14:06 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/05 15:38:11 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr = malloc((len + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
-	if ( (start > ft_strlen(s)))
+	if ((start > ft_strlen(s)))
 		return (ptr);
 	while (i < len && s[start + i])
 	{
