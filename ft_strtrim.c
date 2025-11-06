@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:55:42 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 15:14:58 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/06 08:40:40 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,35 +33,18 @@ static int	ft_startingindex(char const *s1, char const *set)
 	int	index;
 
 	index = 0;
-	while (ft_is_sep(s1[index], set))
+	while (s1[index] && ft_is_sep(s1[index], set))
 		index++;
-	if (index == (int)ft_strlen(s1))
-		index = 0;
 	return (index);
 }
 
 static int	ft_endingindex(char const *s1, char const *set)
 {
 	int	index;
-	int	i;
 
-	i = 0;
-	index = -1;
-	if (!s1)
-		return (0);
-	while (s1[i])
-	{
-		if (ft_is_sep(s1[i], set))
-		{
-			if (index == -1)
-				index = i;
-		}
-		else
-			index = -1;
-		i++;
-	}
-	if (index == -1)
-		index = ft_strlen(s1);
+	index = (int)ft_strlen(s1);
+	while (index > 0 && ft_is_sep(s1[index-1], set))
+		index--;
 	return (index);
 }
 
@@ -70,25 +53,20 @@ char	*ft_strtrim(char const*s1, char const *set)
 	int		index_debut;
 	int		index_fin;
 	int		len_ptr;
-	int		i;
 	char	*ptr;
 
-	i = 0;
 	if (!set || !s1)
 		return (NULL);
 	index_debut = ft_startingindex(s1, set);
 	index_fin = ft_endingindex(s1, set);
+	if (index_fin < index_debut)
+		index_fin = index_debut;
 	len_ptr = index_fin - index_debut;
 	ptr = malloc((len_ptr + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
-	while (i < len_ptr)
-	{
-		ptr[i] = s1[index_debut];
-		i++;
-		index_debut++;
-	}
-	ptr[i] = '\0';
+	ft_memcpy(ptr, s1 + index_debut, len_ptr);
+	ptr[len_ptr] = '\0';
 	return (ptr);
 }
 /*

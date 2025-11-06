@@ -6,7 +6,7 @@
 /*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:15:37 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 23:47:23 by clement          ###   ########.fr       */
+/*   Updated: 2025/11/06 08:29:07 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	is_word(const char *s, char sep, int index)
 {
 	if (index == 0 && s[index] != sep)
 		return (1);
-	if ((s[index - 1] == sep) && (s[index] != sep))
+	if (s[index] > 0 && (s[index - 1] == sep) && (s[index] != sep))
 		return (1);
 	return (0);
 }
@@ -49,7 +49,7 @@ static char	*insert_word(char *ptr, const char *s, char sep, int index)
 	int	len_word;
 
 	i = index;
-	while (s[i] != sep && s[i])
+	while (s[i] && s[i] != sep)
 		i++;
 	len_word = i - index;
 	ptr = malloc((len_word + 1) * sizeof(char));
@@ -76,7 +76,7 @@ static void	ft_clean_ptr(char **ptr, int index_ptr)
 		free(ptr[i]);
 		i++;
 	}
-	free(ptr[i]);
+	free(ptr);
 }
 
 char	**ft_split(char const *s, char c)
