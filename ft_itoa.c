@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 16:29:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/06 11:18:07 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/06 11:29:47 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,9 @@ char	*ft_itoa(int n)
 int main()
 {
 	char    *result;
-	result = ft_itoa(-42);
+	result = ft_atoi((e + "+1").c_str());
+	//result = ft_itoa((e + "+101").c_str());
+	//result = ft_itoa((e + "+42lyon").c_str());
 	printf("%s\n", result);
 	free(result);
 	return (0);

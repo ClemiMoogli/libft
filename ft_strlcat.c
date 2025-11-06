@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:36:12 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/06 10:10:43 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/06 11:37:51 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,3 +68,20 @@ size et on retourne la longueur qu'on aurait eu si on avait assez de place
  et return len total
 - cas4: size > len_dst + len_src 
 */
+
+int main(void)
+{
+	char dest[30]; memset(dest, 0, 30);
+	char * src = (char *)"AAAAAAAAA";
+	dest[0] = 'B';
+
+	printf("RESULT PERSO : %zu - VRAI: 13\n", ft_strlcat(dest, src, 6));
+	printf("RESULT PERSO : %zu - VRAI: 14\n", ft_strlcat(dest, src, -1));
+	printf("RESULT PERSO : %zu - VRAI: 24\n", ft_strlcat(dest, src, 17));
+	printf("RESULT PERSO : %zu - VRAI: \n", ft_strlcat(dest, src, 1));
+	printf("RESULT PERSO : %zu - VRAI: \n", ft_strlcat(dest, src, 5));
+	printf("RESULT PERSO : %zu - VRAI: 3\n", ft_strlcat(dest, "123", 1));
+	printf("RESULT PERSO : %zu - VRAI: 3\n", ft_strlcat(dest, "123", 2));
+	printf("RESULT PERSO : %zu - VRAI: 14\n", ft_strlcat(dest, src, -1));
+	return (0);
+}
