@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:25:15 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 14:50:09 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/06 11:12:48 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (!ptr)
 		return (NULL);
 	i = 0;
-	while (i < size)
-		ptr[i++] = (unsigned char)0;
+	while (i < size && i <nmemb)
+		ptr[i++] = '\0';
 	return (ptr);
 }
 /*

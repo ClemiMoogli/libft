@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 16:29:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 15:35:10 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/06 11:18:07 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_itoa(int n)
 	nb = (long)n;
 	len = ft_lenptr(n);
 	ptr = malloc((len + 1) * sizeof(char));
-	ptr[len + 1] = '\0';
+	ptr[len] = '\0';
 	if (!ptr)
 		return (NULL);
 	if (nb < 0)
@@ -65,7 +65,7 @@ char	*ft_itoa(int n)
 int main()
 {
 	char    *result;
-	result = ft_itoa(-2147483648);
+	result = ft_itoa(-42);
 	printf("%s\n", result);
 	free(result);
 	return (0);

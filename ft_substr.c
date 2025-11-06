@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 09:57:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 15:38:11 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/06 10:52:30 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,26 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
 /*
-int main()
-{
-    char            s[] = "test";
-    unsigned int    start = 10;
-    size_t          len = 3;
+int main() {
+    char *s = "hola";
+    char *sub;
 
-    printf("PERSO: %s\n", ft_substr(s, start, len));
-    return (0);
+    sub = ft_substr(s, 4, 1);
+	printf("%s\n", sub);
+    if (sub == NULL || strcmp(sub, "") != 0) {
+        if (sub) free(sub);
+        return 1;
+    }
+    free(sub);
+
+    sub = ft_substr(s, 3, 1);
+	printf("%s\n", sub);
+    if (sub == NULL || strcmp(sub, "a") != 0) {
+        if (sub) free(sub);
+        return 1;
+    }
+    free(sub);
+
+    return 0;
 }*/
