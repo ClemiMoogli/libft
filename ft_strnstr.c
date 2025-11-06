@@ -12,7 +12,6 @@
 
 #include "libft.h"
 #include <stdio.h>
-#include <bsd/string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

@@ -21,7 +21,7 @@ int	ft_lenptr(int nb)
 
 	len = 0;
 	tmp = (long)nb;
-	if (tmp <= 0);
+	if (tmp <= 0)
 		len = 1;
 	if (tmp < 0)
 		tmp = -tmp;
@@ -62,6 +62,7 @@ char	*ft_itoa(int n)
 	return (ptr);
 }
 
+/*
 int main()
 {
 	char    *result;
@@ -72,3 +73,4 @@ int main()
 	free(result);
 	return (0);
 }
+*/
