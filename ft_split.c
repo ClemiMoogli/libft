@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:15:37 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/06 08:29:07 by clement          ###   ########.fr       */
+/*   Updated: 2025/11/06 10:41:23 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,21 +92,19 @@ char	**ft_split(char const *s, char c)
 	ptr = malloc((count_word(s, c) + 1) * sizeof(char *));
 	if (!ptr)
 		return (NULL);
-	while (s[i])
+	while (s[i] && ptr)
 	{
 		if (is_word(s, c, i))
 		{
 			ptr[index_ptr] = insert_word(ptr[index_ptr], s, c, i);
 			if (!ptr[index_ptr])
-			{
 				ft_clean_ptr(ptr, index_ptr);
-				return (NULL);
-			}
 			index_ptr++;
 		}
 		i++;
 	}
-	ptr[index_ptr] = NULL;
+	if (ptr)
+		ptr[index_ptr] = NULL;
 	return (ptr);
 }
 

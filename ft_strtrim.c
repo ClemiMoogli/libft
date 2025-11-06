@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:55:42 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/06 08:40:40 by clement          ###   ########.fr       */
+/*   Updated: 2025/11/06 09:41:11 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	ft_endingindex(char const *s1, char const *set)
 	int	index;
 
 	index = (int)ft_strlen(s1);
-	while (index > 0 && ft_is_sep(s1[index-1], set))
+	while (index > 0 && ft_is_sep(s1[index - 1], set))
 		index--;
 	return (index);
 }

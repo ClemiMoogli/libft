@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 09:38:00 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 15:53:53 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/06 09:40:53 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ typedef struct s_libft
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);

@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:20:51 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 12:30:33 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/06 10:18:46 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi(const char *nptr)
 		sign *= -1;
 		i++;
 	}
-	while (nptr[i] == '+')
+	if (nptr[0] == '+')
 		i++;
 	while (nptr[i])
 	{
@@ -45,7 +45,7 @@ int	ft_atoi(const char *nptr)
 /*
 int	main()
 {
-	char	result[50] = "25";
+	char	result[50] = "-25";
 	printf("PERSO: %d\n", ft_atoi(result));
 	printf("VRAI: %d\n", atoi(result));
 	return (0);

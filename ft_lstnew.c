@@ -6,13 +6,15 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 15:57:35 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 16:07:14 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/06 09:39:16 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 t_list	*ft_lstnew(void *content)
 {
 	
 	malloc(sizeof(t_list))
 	return ();
 }
+*/
