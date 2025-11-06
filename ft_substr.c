@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 09:57:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/06 10:52:30 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/06 20:37:56 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+static size_t	sub_len(size_t slen, size_t start, size_t len)
+{
+	size_t	max;
+
+	if (start >= slen)
+		return (0);
+	max = slen - start;
+	if (len < max)
+		return (len);
+	return (max);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
+	size_t	slen;
 	size_t	i;
 
 	i = 0;
 	if (!s)
 		return (NULL);
-	
-	ptr = malloc((len + 1) * sizeof(char));
+	slen = ft_strlen(s);
+	i = sub_len(slen, (size_t)start, len);
+	ptr = (char *)ft_calloc(i + 1, 1);
 	if (!ptr)
-		return (NULL);
-	if ((start > ft_strlen(s)))
-		return (ptr);
-	while (i < len && s[start + i])
-	{
-		ptr[i] = ((char *)s)[start + i];
-		i++;
-	}
-	ptr[i] = '\0';
+		return (NULL);	
+	if (i)
+		ft_memcpy(ptr, s + start, i);
 	return (ptr);
 }
 /*
