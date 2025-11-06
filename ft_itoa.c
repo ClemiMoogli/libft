@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 16:29:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/06 11:29:47 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/06 17:12:56 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_lenptr(int nb)
 
 	len = 0;
 	tmp = (long)nb;
-	if (tmp <= 0)
+	if (tmp <= 0);
 		len = 1;
 	if (tmp < 0)
 		tmp = -tmp;
@@ -44,9 +44,9 @@ char	*ft_itoa(int n)
 	nb = (long)n;
 	len = ft_lenptr(n);
 	ptr = malloc((len + 1) * sizeof(char));
-	ptr[len] = '\0';
 	if (!ptr)
 		return (NULL);
+	ptr[len] = '\0';
 	if (nb < 0)
 	{
 		ptr[0] = '-';
@@ -61,14 +61,14 @@ char	*ft_itoa(int n)
 	}
 	return (ptr);
 }
-/*
+
 int main()
 {
 	char    *result;
-	result = ft_atoi((e + "+1").c_str());
+	//result = ft_atoi((e + "+1").c_str());
 	//result = ft_itoa((e + "+101").c_str());
 	//result = ft_itoa((e + "+42lyon").c_str());
 	printf("%s\n", result);
 	free(result);
 	return (0);
-}*/
+}

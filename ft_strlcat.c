@@ -3,41 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:36:12 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/06 12:10:30 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/06 17:38:13 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <bsd/string.h>
+#include <string.h>
 #include <stdio.h>
+
+size_t	ft_lendest(char *dst, size_t size)
+{
+	size_t	i;
+
+	i = 0;
+	while (dst[i] && i < size)
+		i++;
+	return (i);
+}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	len_dst_int;
 	size_t	len_dst;
+	size_t	len_src;
 	size_t	j;
 
-	len_dst_int = ft_strlen(dst);
-	len_dst = len_dst_int;
+	len_dst = ft_lendest(dst, size);
+	len_src = ft_strlen(src);
 	j = 0;
-	if (size == 0 || size <= len_dst)
-		return (size + ft_strlen(src));
-	if (ft_strlen(src) == 0)
-		return (ft_strlen(dst) + ft_strlen(src));
-	else if (len_dst_int < size)
+	if (size == 0 || len_dst == size)
+		return (len_dst + len_src);
+	while (src[j] && (len_dst + j + 1) < size)
 	{
-		while (src[j] && (len_dst + j) <= size)
-		{
-			dst[len_dst] = src[j];
-			len_dst++;
-			j++;
-		}
-		dst[len_dst] = '\0';
+		dst[len_dst + j] = src[j];
+		j++;
 	}
-	return (len_dst_int + ft_strlen(src));
+	dst[len_dst + j] = '\0';
+	return (len_dst + len_src);
 }
 /*
 int	main(){
@@ -69,7 +73,7 @@ size et on retourne la longueur qu'on aurait eu si on avait assez de place
 - cas3: len_dst < size <= len_dst + len_src, copier jusqu'a size-1 + '\0' 
  et return len total
 - cas4: size > len_dst + len_src 
-*/
+
 
 int main(void)
 {
@@ -91,4 +95,4 @@ int main(void)
 	printf("PERSO: %s\n", dest);
 	printf("VRAI : %s\n", dest2);
 	return (0);
-}
+}*/

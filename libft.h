@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 09:38:00 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/06 09:40:53 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/06 17:19:37 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <ctype.h>
 # include <stdio.h>
-# include <bsd/string.h>
+# include <string.h>
 # include <stddef.h>
 # include <string.h>
 # include <stdlib.h>
