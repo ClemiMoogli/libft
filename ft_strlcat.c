@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:36:12 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/06 11:37:51 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/06 11:41:13 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int main(void)
 	char dest[30]; memset(dest, 0, 30);
 	char * src = (char *)"AAAAAAAAA";
 	dest[0] = 'B';
-
+	// tout mes cas d'erreurs:
 	printf("RESULT PERSO : %zu - VRAI: 13\n", ft_strlcat(dest, src, 6));
 	printf("RESULT PERSO : %zu - VRAI: 14\n", ft_strlcat(dest, src, -1));
 	printf("RESULT PERSO : %zu - VRAI: 24\n", ft_strlcat(dest, src, 17));
