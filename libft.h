@@ -6,7 +6,7 @@
 /*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 09:38:00 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/06 17:19:37 by clement          ###   ########.fr       */
+/*   Updated: 2025/11/08 09:35:22 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@
 # include <stdio.h>
 # include <string.h>
 # include <stddef.h>
-# include <string.h>
 # include <stdlib.h>
 
-typedef struct s_libft
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
