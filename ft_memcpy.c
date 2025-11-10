@@ -6,13 +6,11 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 10:28:46 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 15:38:55 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:13:51 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

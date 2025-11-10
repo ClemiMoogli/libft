@@ -6,13 +6,11 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 10:41:40 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 15:42:30 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:16:24 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

@@ -6,13 +6,11 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:55:42 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/06 09:41:11 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:16:51 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	ft_is_sep(char c, char const *sep)
 {

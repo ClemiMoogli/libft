@@ -6,12 +6,11 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 12:33:04 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/04 11:29:12 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:15:52 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

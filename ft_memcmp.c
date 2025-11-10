@@ -6,17 +6,15 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 10:05:38 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 15:23:28 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:13:42 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 int	ft_memcmp(const	void *s1, const void *s2, size_t n)
 {
-	size_t			i;
+	size_t				i;
 	const unsigned char	*str1;
 	const unsigned char	*str2;
 

@@ -3,18 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:36:12 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/06 17:38:13 by clement          ###   ########.fr       */
+/*   Updated: 2025/11/10 10:15:46 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
-size_t	ft_lendest(char *dst, size_t size)
+static size_t	ft_lendest(char *dst, size_t size)
 {
 	size_t	i;
 
@@ -83,16 +81,6 @@ int main(void)
 	dest[0] = 'B';
 	dest2[0] = 'B';
 
-	// tout mes cas d'erreurs:
-	//printf("RESULT PERSO : %zu - VRAI: %zu\n", ft_strlcat(dest, src, 6), strlcat(dest2, src, 6));
-	//printf("RESULT PERSO : %zu - VRAI: %zu\n", ft_strlcat(dest, src, -1), strlcat(dest2, src, -1));
-	//printf("RESULT PERSO : %zu - VRAI: %zu\n", ft_strlcat(dest, src, 17), strlcat(dest2, src, 17));
-	//printf("RESULT PERSO : %zu - VRAI: %zu\n", ft_strlcat(dest, src, 1), strlcat(dest2, src, 1));
-	//printf("RESULT PERSO : %zu - VRAI: %zu\n", ft_strlcat(dest, src, 5), strlcat(dest2, src, 5));
-	//printf("RESULT PERSO : %zu - VRAI: %zu\n", ft_strlcat(dest, "123", 1), strlcat(dest2, "123", 1));
-	//printf("RESULT PERSO : %zu - VRAI: %zu\n", ft_strlcat(dest, "123", 2), strlcat(dest2, "123", 2));
-	printf("RESULT PERSO : %zu - VRAI: %zu\n", ft_strlcat(dest, src, -1), strlcat(dest2, src, -1));
-	printf("PERSO: %s\n", dest);
 	printf("VRAI : %s\n", dest2);
 	return (0);
 }*/

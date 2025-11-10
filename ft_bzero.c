@@ -6,12 +6,11 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:57:37 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 15:38:30 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:12:40 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {

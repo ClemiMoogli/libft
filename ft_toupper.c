@@ -6,13 +6,11 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 10:42:30 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 15:00:26 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:17:13 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
-#include <stdio.h>
 
 int	ft_toupper(int c)
 {

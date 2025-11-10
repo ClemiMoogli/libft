@@ -6,13 +6,11 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 10:42:20 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/03 15:06:37 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:17:07 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
 
 int	ft_tolower(int c)
 {

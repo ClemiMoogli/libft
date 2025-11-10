@@ -6,20 +6,23 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:15:37 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/06 10:41:23 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:15:09 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 static int	is_word(const char *s, char sep, int index)
 {
 	if (index == 0 && s[index] != sep)
 		return (1);
-	if (s[index] > 0 && (s[index - 1] == sep) && (s[index] != sep))
-		return (1);
+	if (index == 0 && s[index] == sep)
+		return (0);
+	if (s[index] > 0)
+	{
+		if ((s[index - 1] == sep) && (s[index] != sep))
+			return (1);
+	}
 	return (0);
 }
 
@@ -110,7 +113,7 @@ char	**ft_split(char const *s, char c)
 
 /*
 int main() {
-    char *s = "Hello";
+    char *s = " Tripouille";
     char **result = ft_split(s, ' ');
 
     if (result == NULL) return 1;
@@ -124,7 +127,6 @@ int main() {
     free(result);
     return 0;
 }
-
 
 int main()
 {

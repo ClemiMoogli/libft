@@ -6,12 +6,11 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 11:36:13 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 15:35:58 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:14:54 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {

@@ -6,7 +6,7 @@
 #    By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/03 15:46:49 by cjeannin          #+#    #+#              #
-#    Updated: 2025/11/06 11:00:09 by cjeannin         ###   ########.fr        #
+#    Updated: 2025/11/10 10:11:10 by cjeannin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,9 +46,14 @@ SRC=ft_atoi.c \
 	ft_strtrim.c \
 	ft_substr.c \
 	ft_tolower.c \
-	ft_toupper.c
+	ft_toupper.c \
+	ft_lstadd_back_bonus.c \
+	ft_lstadd_front_bonus.c \
+	ft_lstlast_bonus.c \
+	ft_lstnew_bonus.c \
+	ft_lstsize_bonus.c
 
-BONUS=ft_lstnew.c
+BONUS=ft_lstnew_bonus.c ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstlast_bonus.c ft_lstsize_bonus.c
 
 OBJ= $(SRC:.c=.o)
 

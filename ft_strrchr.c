@@ -6,14 +6,11 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 10:41:53 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/05 09:44:48 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:16:41 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// KO AUSSI
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 char	*ft_strrchr(const char *s, int c)
 {

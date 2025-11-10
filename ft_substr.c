@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clement <clement@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 09:57:17 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/06 20:37:56 by clement          ###   ########.fr       */
+/*   Updated: 2025/11/10 10:16:57 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static size_t	sub_len(size_t slen, size_t start, size_t len)
 {
@@ -39,7 +37,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = sub_len(slen, (size_t)start, len);
 	ptr = (char *)ft_calloc(i + 1, 1);
 	if (!ptr)
-		return (NULL);	
+		return (NULL);
 	if (i)
 		ft_memcpy(ptr, s + start, i);
 	return (ptr);
