@@ -1,3 +1,0 @@
-gcl http://github.com/Blaeste/libfterator
-cd libfterator
-/tester.py ../libft  
