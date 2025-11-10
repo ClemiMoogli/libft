@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+         #
+#    By: clement <clement@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/03 15:46:49 by cjeannin          #+#    #+#              #
-#    Updated: 2025/11/10 11:48:16 by cjeannin         ###   ########.fr        #
+#    Updated: 2025/11/10 15:37:25 by clement          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME= libft.a
-CC=cc
-CFLAGS= -Wall -Werror -Wextra
+NAME := libft.a
+CC :=cc
+CFLAGS := -Wall -Werror -Wextra
 SRC=ft_atoi.c \
 	ft_bzero.c \
 	ft_calloc.c \
@@ -66,8 +66,9 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus: $(OBJ_BONUS)
-	ar rcs $(NAME) $(OBJ_BONUS) $(OBJ)
+bonus: $(OBJ) $(OBJ_BONUS)
+	ar rcs $(NAME) $(OBJ) $(OBJ_BONUS)
+
 clean:
 	rm -f $(OBJ)
 	rm -f $(OBJ_BONUS)
