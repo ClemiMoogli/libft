@@ -6,7 +6,7 @@
 #    By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/03 15:46:49 by cjeannin          #+#    #+#              #
-#    Updated: 2025/11/10 11:27:36 by cjeannin         ###   ########.fr        #
+#    Updated: 2025/11/10 11:48:16 by cjeannin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,9 +76,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 .PHONY: all clean fclean re
