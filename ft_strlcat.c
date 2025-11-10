@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:36:12 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/10 10:15:46 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/10 11:44:41 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	len_src;
 	size_t	j;
 
+	if ((!src || !dst) && size == 0)
+		return (0);
 	len_dst = ft_lendest(dst, size);
 	len_src = ft_strlen(src);
 	j = 0;

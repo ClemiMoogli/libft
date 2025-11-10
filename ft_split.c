@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:15:37 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/10 10:15:09 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:32:24 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ static char	*insert_word(char *ptr, const char *s, char sep, int index)
 	return (ptr);
 }
 
-static void	ft_clean_ptr(char **ptr, int index_ptr)
+static char	**ft_clean_ptr(char **ptr, int index_ptr)
 {
 	int	i;
 
@@ -80,6 +80,7 @@ static void	ft_clean_ptr(char **ptr, int index_ptr)
 		i++;
 	}
 	free(ptr);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -101,7 +102,7 @@ char	**ft_split(char const *s, char c)
 		{
 			ptr[index_ptr] = insert_word(ptr[index_ptr], s, c, i);
 			if (!ptr[index_ptr])
-				ft_clean_ptr(ptr, index_ptr);
+				return (ft_clean_ptr(ptr, index_ptr));
 			index_ptr++;
 		}
 		i++;
