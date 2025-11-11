@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 14:46:24 by clement           #+#    #+#             */
-/*   Updated: 2025/11/10 12:43:02 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/11 08:22:37 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_lstsize(t_list *lst)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	if (!lst)
 		return (0);
 	while (lst->next)
