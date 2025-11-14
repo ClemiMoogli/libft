@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:36:12 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/10 11:44:41 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:52:57 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static size_t	ft_lendest(char *dst, size_t size)
 	size_t	i;
 
 	i = 0;
-	while (dst[i] && i < size)
+	while (i < size && dst[i])
 		i++;
 	return (i);
 }

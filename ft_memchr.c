@@ -6,7 +6,7 @@
 /*   By: cjeannin <cjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 10:40:21 by cjeannin          #+#    #+#             */
-/*   Updated: 2025/11/10 11:06:14 by cjeannin         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:49:45 by cjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (((unsigned char *)s)[i] == (unsigned char)c)
 		{
-			result = &((void *)s)[i];
+			result = &((char *)s)[i];
 			return (result);
 		}
 		i++;
